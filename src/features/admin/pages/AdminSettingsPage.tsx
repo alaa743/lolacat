@@ -4,9 +4,10 @@ import { useTranslation } from "react-i18next";
 import { useAppData } from "@/app/providers/AppProvider";
 import { FormField, PageHeader } from "@/components/common/PageHeader";
 import { Button } from "@/components/ui/Button";
-import { Input, Select, Textarea } from "@/components/ui/Input";
+import { DropdownSelect } from "@/components/ui/DropdownSelect";
+import { Input, Textarea } from "@/components/ui/Input";
 import { restaurantSettingsSchema } from "@/schemas/menu.schema";
-import type { RestaurantSettings } from "@/types";
+import type { RestaurantSettings, SupportedLanguage } from "@/types";
 
 export default function AdminSettingsPage() {
   const { t } = useTranslation(["admin", "common"]);
@@ -16,6 +17,7 @@ export default function AdminSettingsPage() {
     register,
     handleSubmit,
     watch,
+    setValue,
     formState: { errors },
   } = useForm<RestaurantSettings>({
     resolver: zodResolver(restaurantSettingsSchema),
@@ -184,10 +186,21 @@ export default function AdminSettingsPage() {
               <Input {...register("currency")} />
             </FormField>
             <FormField label={t("admin:settings.defaultLanguage")}>
-              <Select {...register("defaultLanguage")}>
-                <option value="en">{t("common:language.english")}</option>
-                <option value="ar">{t("common:language.arabic")}</option>
-              </Select>
+              <DropdownSelect
+                ariaLabel={t("admin:settings.defaultLanguage")}
+                value={watch("defaultLanguage")}
+                onValueChange={(next) =>
+                  setValue("defaultLanguage", next as SupportedLanguage, {
+                    shouldValidate: true,
+                  })
+                }
+                options={[
+                  { value: "en", label: t("common:language.english") },
+                  { value: "ar", label: t("common:language.arabic") },
+                ]}
+                className="w-full"
+                triggerClassName="h-11 rounded-xl"
+              />
             </FormField>
           </div>
         </section>

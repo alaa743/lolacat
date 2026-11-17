@@ -1,4 +1,4 @@
-import{j as e}from"./motion-Dmu_jKCi.js";import{u as I,a as c}from"./i18n-Ci-l50TW.js";import{L as r}from"./vendor-moPFsORz.js";import{c as w,e as D,u as A,b as t,U as P,F as u,C as T,Q as z,i as L,g as o,B as M,j as S}from"./index-BmSfE5zy.js";import{P as R}from"./PageHeader-B5SyV4k9.js";import{S as j}from"./SafeFoodImage-B7F6QypZ.js";import{a as q,P as F,S as O}from"./PriceDisplay-CHJImTLe.js";import{P as g}from"./plus-CB9tEhF0.js";import"./forms-BDdlNHxC.js";/**
+import{j as e}from"./motion-Dmu_jKCi.js";import{u as I,a as c}from"./i18n-Ci-l50TW.js";import{L as r}from"./vendor-moPFsORz.js";import{c as w,e as D,u as A,b as t,U as P,F as u,C as T,Q as z,i as L,g as o,B as M,j as S}from"./index-CklC7-dE.js";import{P as R}from"./PageHeader-BkDaAWvd.js";import{S as j}from"./SafeFoodImage-BKyD9uTU.js";import{a as q,P as F,S as O}from"./PriceDisplay-BljIJAft.js";import{P as g}from"./plus-oglV16r9.js";import"./forms-BDdlNHxC.js";/**
  * @license lucide-react v0.468.0 - ISC
  *
  * This source code is licensed under the ISC license.

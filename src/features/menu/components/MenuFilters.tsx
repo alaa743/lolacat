@@ -1,5 +1,6 @@
+import { ArrowUpDown, Flame } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Select } from "@/components/ui/Input";
+import { DropdownSelect } from "@/components/ui/DropdownSelect";
 import { cn, getLocalizedText } from "@/lib/utils";
 import type {
   DietaryLabel,
@@ -119,39 +120,60 @@ export function MenuFilters({
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <Select
-            aria-label={t("filters.spicyFilter")}
+          <DropdownSelect
+            ariaLabel={t("filters.spicyFilter")}
             value={filters.spiceLevel ?? ""}
-            onChange={(e) =>
+            isActive={Boolean(filters.spiceLevel)}
+            leadingIcon={<Flame className="h-3.5 w-3.5" />}
+            onValueChange={(next) =>
               onChange({
                 ...filters,
-                spiceLevel: (e.target.value || undefined) as SpiceLevel | undefined,
+                spiceLevel: (next || undefined) as SpiceLevel | undefined,
               })
             }
-            className="h-9 w-auto min-w-[130px] text-xs"
-          >
-            <option value="">{t("filters.allSpice")}</option>
-            <option value="mild">{t("spice.mild")}</option>
-            <option value="medium">{t("spice.medium")}</option>
-            <option value="hot">{t("spice.hot")}</option>
-          </Select>
+            options={[
+              { value: "", label: t("filters.allSpice") },
+              {
+                value: "mild",
+                label: t("spice.mild"),
+                icon: <Flame className="h-3.5 w-3.5 text-amber-500" />,
+              },
+              {
+                value: "medium",
+                label: t("spice.medium"),
+                icon: <Flame className="h-3.5 w-3.5 text-orange-500" />,
+              },
+              {
+                value: "hot",
+                label: t("spice.hot"),
+                icon: <Flame className="h-3.5 w-3.5 fill-rose-500 text-rose-600" />,
+              },
+            ]}
+            triggerClassName="h-9 min-w-[140px]"
+            testId="filter-spice-dropdown"
+          />
 
-          <Select
-            aria-label={t("filters.sortBy")}
+          <DropdownSelect
+            ariaLabel={t("filters.sortBy")}
             value={filters.sortBy}
-            onChange={(e) =>
+            isActive={filters.sortBy !== "default"}
+            leadingIcon={<ArrowUpDown className="h-3.5 w-3.5" />}
+            align="end"
+            onValueChange={(next) =>
               onChange({
                 ...filters,
-                sortBy: e.target.value as MenuSortOption,
+                sortBy: next as MenuSortOption,
               })
             }
-            className="h-9 w-auto min-w-[165px] text-xs"
-          >
-            <option value="default">{t("filters.sortDefault")}</option>
-            <option value="price_asc">{t("filters.sortPriceAsc")}</option>
-            <option value="price_desc">{t("filters.sortPriceDesc")}</option>
-            <option value="popular">{t("filters.sortPopular")}</option>
-          </Select>
+            options={[
+              { value: "default", label: t("filters.sortDefault") },
+              { value: "price_asc", label: t("filters.sortPriceAsc") },
+              { value: "price_desc", label: t("filters.sortPriceDesc") },
+              { value: "popular", label: t("filters.sortPopular") },
+            ]}
+            triggerClassName="h-9 min-w-[175px]"
+            testId="filter-sort-dropdown"
+          />
         </div>
       </div>
     </div>

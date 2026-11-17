@@ -1,6 +1,7 @@
 import { Search } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Input, Select } from "@/components/ui/Input";
+import { DropdownSelect } from "@/components/ui/DropdownSelect";
+import { Input } from "@/components/ui/Input";
 import { getLocalizedText } from "@/lib/utils";
 import type { MenuCategory, SupportedLanguage } from "@/types";
 
@@ -35,48 +36,60 @@ export function AdminFilters({
         />
       </div>
 
-      <Select
+      <DropdownSelect
+        ariaLabel={t("admin:items.category")}
         value={filters.categoryId}
-        onChange={(e) => onChange({ ...filters, categoryId: e.target.value })}
-        aria-label={t("admin:items.category")}
-      >
-        <option value="">{t("admin:items.allCategories")}</option>
-        {categories.map((cat) => (
-          <option key={cat.id} value={cat.id}>
-            {getLocalizedText(cat.name, lang)}
-          </option>
-        ))}
-      </Select>
+        isActive={Boolean(filters.categoryId)}
+        onValueChange={(next) => onChange({ ...filters, categoryId: next })}
+        options={[
+          { value: "", label: t("admin:items.allCategories") },
+          ...categories.map((cat) => ({
+            value: cat.id,
+            label: getLocalizedText(cat.name, lang),
+          })),
+        ]}
+        className="w-full"
+        triggerClassName="h-11 rounded-xl"
+      />
 
-      <Select
+      <DropdownSelect
+        ariaLabel={t("admin:items.availability")}
         value={filters.availability}
-        onChange={(e) =>
+        isActive={filters.availability !== "all"}
+        onValueChange={(next) =>
           onChange({
             ...filters,
-            availability: e.target.value as AdminFilterValues["availability"],
+            availability: next as AdminFilterValues["availability"],
           })
         }
-        aria-label={t("admin:items.availability")}
-      >
-        <option value="all">{t("admin:items.allAvailability")}</option>
-        <option value="available">{t("admin:items.available")}</option>
-        <option value="unavailable">{t("admin:items.unavailable")}</option>
-      </Select>
+        options={[
+          { value: "all", label: t("admin:items.allAvailability") },
+          { value: "available", label: t("admin:items.available") },
+          { value: "unavailable", label: t("admin:items.unavailable") },
+        ]}
+        className="w-full"
+        triggerClassName="h-11 rounded-xl"
+      />
 
-      <Select
+      <DropdownSelect
+        ariaLabel={t("menu:filters.sortBy")}
         value={filters.sortBy}
-        onChange={(e) =>
+        isActive={filters.sortBy !== "updated"}
+        align="end"
+        onValueChange={(next) =>
           onChange({
             ...filters,
-            sortBy: e.target.value as AdminFilterValues["sortBy"],
+            sortBy: next as AdminFilterValues["sortBy"],
           })
         }
-        aria-label={t("menu:filters.sortBy")}
-      >
-        <option value="updated">{t("admin:items.lastUpdated")}</option>
-        <option value="price_asc">{t("menu:filters.sortPriceAsc")}</option>
-        <option value="price_desc">{t("menu:filters.sortPriceDesc")}</option>
-      </Select>
+        options={[
+          { value: "updated", label: t("admin:items.lastUpdated") },
+          { value: "price_asc", label: t("menu:filters.sortPriceAsc") },
+          { value: "price_desc", label: t("menu:filters.sortPriceDesc") },
+        ]}
+        className="w-full"
+        triggerClassName="h-11 rounded-xl"
+      />
     </div>
   );
 }

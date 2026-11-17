@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { FormField } from "@/components/common/PageHeader";
 import { Button } from "@/components/ui/Button";
-import { Input, Select, Textarea } from "@/components/ui/Input";
+import { DropdownSelect } from "@/components/ui/DropdownSelect";
+import { Input, Textarea } from "@/components/ui/Input";
 import { getLocalizedText } from "@/lib/utils";
 import type {
   DietaryLabel,
@@ -210,23 +211,36 @@ export function MenuItemForm({
         </FormField>
 
         <FormField label={t("admin:itemForm.category")} required error={errors.categoryId?.message}>
-          <Select {...register("categoryId")}>
-            <option value="">{t("admin:itemForm.selectCategory")}</option>
-            {categories.map((cat) => (
-              <option key={cat.id} value={cat.id}>
-                {getLocalizedText(cat.name, lang)}
-              </option>
-            ))}
-          </Select>
+          <DropdownSelect
+            ariaLabel={t("admin:itemForm.category")}
+            placeholder={t("admin:itemForm.selectCategory")}
+            value={watch("categoryId")}
+            onValueChange={(next) => setValue("categoryId", next, { shouldValidate: true })}
+            options={categories.map((cat) => ({
+              value: cat.id,
+              label: getLocalizedText(cat.name, lang),
+            }))}
+            className="w-full"
+            triggerClassName="h-11 rounded-xl"
+          />
         </FormField>
 
         <FormField label={t("admin:itemForm.spiceLevel")}>
-          <Select {...register("spiceLevel")}>
-            <option value="none">{t("menu:spice.none")}</option>
-            <option value="mild">{t("menu:spice.mild")}</option>
-            <option value="medium">{t("menu:spice.medium")}</option>
-            <option value="hot">{t("menu:spice.hot")}</option>
-          </Select>
+          <DropdownSelect
+            ariaLabel={t("admin:itemForm.spiceLevel")}
+            value={watch("spiceLevel")}
+            onValueChange={(next) =>
+              setValue("spiceLevel", next as SpiceLevel, { shouldValidate: true })
+            }
+            options={[
+              { value: "none", label: t("menu:spice.none") },
+              { value: "mild", label: t("menu:spice.mild") },
+              { value: "medium", label: t("menu:spice.medium") },
+              { value: "hot", label: t("menu:spice.hot") },
+            ]}
+            className="w-full"
+            triggerClassName="h-11 rounded-xl"
+          />
         </FormField>
 
         <FormField label={t("admin:itemForm.price")} required error={errors.price?.message}>

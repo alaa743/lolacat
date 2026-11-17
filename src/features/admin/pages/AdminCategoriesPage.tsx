@@ -6,7 +6,8 @@ import { PageHeader } from "@/components/common/PageHeader";
 import { ConfirmDialog } from "@/components/feedback/Feedback";
 import { Button } from "@/components/ui/Button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/Dialog";
-import { Input, Select } from "@/components/ui/Input";
+import { DropdownSelect } from "@/components/ui/DropdownSelect";
+import { Input } from "@/components/ui/Input";
 import { getLocalizedText, normalizeSearchText } from "@/lib/utils";
 import type { MenuCategory, MenuCategoryFormValues, SupportedLanguage } from "@/types";
 import { CategoryForm } from "../components/CategoryForm";
@@ -189,17 +190,17 @@ export default function AdminCategoriesPage() {
             )}
 
             {deleteMode === "reassign" && otherCategories.length > 0 && (
-              <Select
+              <DropdownSelect
                 value={reassignTargetId}
-                onChange={(e) => setReassignTargetId(e.target.value)}
-                aria-label={t("admin:categories.targetCategory")}
-              >
-                {otherCategories.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {getLocalizedText(c.name, lang)}
-                  </option>
-                ))}
-              </Select>
+                onValueChange={setReassignTargetId}
+                ariaLabel={t("admin:categories.targetCategory")}
+                options={otherCategories.map((c) => ({
+                  value: c.id,
+                  label: getLocalizedText(c.name, lang),
+                }))}
+                className="w-full"
+                triggerClassName="h-11 rounded-xl"
+              />
             )}
 
             <label className="flex cursor-pointer items-center gap-2 font-medium text-red-700">

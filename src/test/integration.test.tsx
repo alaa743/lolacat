@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeAll, describe, expect, it } from "vitest";
 import App from "@/app/App";
@@ -202,6 +202,28 @@ describe("Lolacat>< Integration Flows", () => {
       expect(window.localStorage.getItem(STORAGE_KEYS.SETTINGS)).toContain(
         "orders@lolacat.kitchen",
       );
+    });
+  });
+
+  it("filters and sorts menu items using the custom DropdownSelect menus", async () => {
+    window.sessionStorage.setItem(BRAND.SPLASH.SESSION_KEY, "1");
+    window.history.pushState({}, "", "/");
+    const user = userEvent.setup();
+
+    render(<App />);
+
+    const spiceTrigger = await screen.findByTestId("filter-spice-dropdown", {}, { timeout: 6000 });
+    await user.click(spiceTrigger);
+
+    const hotOption = await screen.findByRole("option", { name: "Hot" });
+    await user.click(hotOption);
+
+    await waitFor(() => {
+      const fullMenu = document.getElementById("full-menu")!;
+      expect(within(fullMenu).getByTestId("menu-item-card-spicy-miso-ramen")).toBeInTheDocument();
+      expect(
+        within(fullMenu).queryByTestId("menu-item-card-classic-california-roll"),
+      ).not.toBeInTheDocument();
     });
   });
 });
