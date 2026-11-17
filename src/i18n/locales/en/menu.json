@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge": "Japanese Sushi & Noodles",
+    "headline": "Little bites. Big happiness.",
+    "description": "Discover your favorite sushi, ramen, and Japanese-inspired flavors.",
+    "cta": "Explore Menu",
+    "secondaryCta": "Today's Favorites"
+  },
+  "sections": {
+    "categoriesTitle": "Explore Categories",
+    "categoriesSubtitle": "Handcrafted Japanese classics prepared fresh to order",
+    "featuredTitle": "Meow-velous Favorites",
+    "featuredSubtitle": "Signature rolls and steaming bowls loved by our guests",
+    "fullMenuTitle": "Full Menu",
+    "fullMenuSubtitle": "Search by dish name, ingredient, or filter by your cravings",
+    "restaurantInfoTitle": "Visit Lolacat><",
+    "openingHours": "Opening Hours",
+    "contactUs": "Contact & Location",
+    "followUs": "Follow Us"
+  },
+  "filters": {
+    "searchPlaceholder": "Search sushi, ramen, salmon, spicy...",
+    "clearSearch": "Clear search",
+    "allCategories": "All Categories",
+    "popularOnly": "Popular",
+    "availableOnly": "Available Only",
+    "vegetarian": "Vegetarian",
+    "vegan": "Vegan",
+    "gluten_free": "Gluten Free",
+    "spicyFilter": "Spice Level",
+    "allSpice": "Any Spice",
+    "sortBy": "Sort by",
+    "sortDefault": "Recommended",
+    "sortPriceAsc": "Price: Low to High",
+    "sortPriceDesc": "Price: High to Low",
+    "sortPopular": "Most Popular",
+    "resetFilters": "Reset Filters",
+    "resultsCount_one": "{{count}} dish found",
+    "resultsCount_other": "{{count}} dishes found"
+  },
+  "item": {
+    "popular": "Popular",
+    "featured": "Chef's Pick",
+    "available": "Available",
+    "unavailable": "Currently Unavailable",
+    "viewDetails": "View Details",
+    "dishesCount_one": "{{count}} dish",
+    "dishesCount_other": "{{count}} dishes",
+    "ingredients": "Ingredients",
+    "allergens": "Allergens",
+    "prepTime": "Prep Time",
+    "spiceLevel": "Spice Level",
+    "calories": "Calories",
+    "kcal": "{{count}} kcal",
+    "portionSize": "Portion",
+    "category": "Category",
+    "closed": "Closed"
+  },
+  "spice": {
+    "none": "Not Spicy",
+    "mild": "Mild",
+    "medium": "Medium",
+    "hot": "Hot"
+  },
+  "dietary": {
+    "vegetarian": "Vegetarian",
+    "vegan": "Vegan",
+    "gluten_free": "Gluten-Free"
+  },
+  "empty": {
+    "noDishesTitle": "No dishes match your search",
+    "noDishesDesc": "Try clearing a filter or searching in English or Arabic.",
+    "emptyCategoryTitle": "No dishes in this category yet",
+    "emptyCategoryDesc": "Check back soon or browse our other delicious categories.",
+    "missingCategoryTitle": "Category not found",
+    "missingCategoryDesc": "This menu category does not exist or may have been removed.",
+    "missingItemTitle": "Dish not found",
+    "missingItemDesc": "This dish could not be found on our menu."
+  }
+}

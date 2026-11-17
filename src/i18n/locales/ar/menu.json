@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "سوشي ونودلز يابانية",
+    "headline": "لقيمات صغيرة.. سعادة كبيرة.",
+    "description": "اكتشف عالم السوشي والرامن والنكهات اليابانية المميزة.",
+    "cta": "تصفح القائمة",
+    "secondaryCta": "الأكثر طلباً"
+  },
+  "sections": {
+    "categoriesTitle": "أقسام القائمة",
+    "categoriesSubtitle": "أطباق يابانية محضرة بعناية وطازجة عند الطلب",
+    "featuredTitle": "مختارات لولا كات المميزة",
+    "featuredSubtitle": "أشهى لفائف السوشي وأطباق الرامن المحبوبة لدى ضيوفنا",
+    "fullMenuTitle": "القائمة الكاملة",
+    "fullMenuSubtitle": "ابحث باسم الطبق أو المكونات أو صفِّ حسب رغبتك",
+    "restaurantInfoTitle": "زورونا في Lolacat><",
+    "openingHours": "ساعات العمل",
+    "contactUs": "التواصل والعنوان",
+    "followUs": "تابعونا"
+  },
+  "filters": {
+    "searchPlaceholder": "ابحث عن سوشي، رامن، سلمون، حار...",
+    "clearSearch": "مسح البحث",
+    "allCategories": "كل الأقسام",
+    "popularOnly": "الأكثر طلباً",
+    "availableOnly": "المتوفر فقط",
+    "vegetarian": "نباتي",
+    "vegan": "نباتي صرف",
+    "gluten_free": "خالي من الجلوتين",
+    "spicyFilter": "مستوى الحرارة",
+    "allSpice": "كل المستويات",
+    "sortBy": "ترتيب حسب",
+    "sortDefault": "المقترح",
+    "sortPriceAsc": "السعر: من الأقل للأعلى",
+    "sortPriceDesc": "السعر: من الأعلى للأقل",
+    "sortPopular": "الأكثر شهرة",
+    "resetFilters": "إعادة ضبط الفلاتر",
+    "resultsCount_zero": "لا توجد أطباق مطابقة",
+    "resultsCount_one": "تم العثور على طبق واحد",
+    "resultsCount_two": "تم العثور على طبقين",
+    "resultsCount_few": "تم العثور على {{count}} أطباق",
+    "resultsCount_many": "تم العثور على {{count}} طبقاً",
+    "resultsCount_other": "تم العثور على {{count}} طبق"
+  },
+  "item": {
+    "popular": "الأكثر طلباً",
+    "featured": "اختيار الشيف",
+    "available": "متوفر",
+    "unavailable": "غير متوفر حالياً",
+    "viewDetails": "عرض التفاصيل",
+    "dishesCount_zero": "لا توجد أطباق",
+    "dishesCount_one": "طبق واحد",
+    "dishesCount_two": "طبقان",
+    "dishesCount_few": "{{count}} أطباق",
+    "dishesCount_many": "{{count}} طبقاً",
+    "dishesCount_other": "{{count}} طبق",
+    "ingredients": "المكونات",
+    "allergens": "مسببات الحساسية",
+    "prepTime": "وقت التحضير",
+    "spiceLevel": "مستوى الحرارة",
+    "calories": "السعرات الحرارية",
+    "kcal": "{{count}} سعرة",
+    "portionSize": "حجم الحصة",
+    "category": "القسم",
+    "closed": "مغلق"
+  },
+  "spice": {
+    "none": "غير حار",
+    "mild": "حار خفيف",
+    "medium": "حار متوسط",
+    "hot": "حار جداً"
+  },
+  "dietary": {
+    "vegetarian": "نباتي",
+    "vegan": "نباتي صرف",
+    "gluten_free": "خالي من الجلوتين"
+  },
+  "empty": {
+    "noDishesTitle": "لا توجد أطباق مطابقة لبحثك",
+    "noDishesDesc": "جرّب مسح الفلاتر أو البحث بالعربية أو الإنجليزية.",
+    "emptyCategoryTitle": "لا توجد أطباق في هذا القسم بعد",
+    "emptyCategoryDesc": "تحقق قريباً أو تصفح الأقسام الأخرى.",
+    "missingCategoryTitle": "القسم غير موجود",
+    "missingCategoryDesc": "هذا القسم غير موجود أو ربما تم حذفه.",
+    "missingItemTitle": "الطبق غير موجود",
+    "missingItemDesc": "تعذر العثور على هذا الطبق في القائمة."
+  }
+}

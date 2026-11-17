@@ -1,0 +1,63 @@
+{
+  "brand": {
+    "name": "Lolacat><",
+    "tagline": "Little bites. Big happiness.",
+    "splashMessage": "Preparing something delicious...",
+    "skipSplash": "Enter Menu"
+  },
+  "nav": {
+    "menu": "Menu",
+    "featured": "Favorites",
+    "categories": "Categories",
+    "about": "Info & Hours",
+    "admin": "Admin",
+    "backToMenu": "Back to Menu",
+    "backToCategory": "Back to Category",
+    "browseFullMenu": "Browse Full Menu",
+    "exploreMoreDishes": "Explore More Dishes",
+    "viewPublicMenu": "View Public Menu",
+    "previewMenu": "Preview Menu"
+  },
+  "language": {
+    "en": "EN",
+    "ar": "AR",
+    "switchTo": "Switch language",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "create": "Create",
+    "update": "Update",
+    "confirm": "Confirm",
+    "close": "Close",
+    "clear": "Clear",
+    "reset": "Reset",
+    "search": "Search",
+    "actions": "Actions",
+    "status": "Status",
+    "yes": "Yes",
+    "no": "No",
+    "notFoundTitle": "Page Not Found",
+    "notFoundDesc": "The page you are looking for doesn't exist or has been moved.",
+    "goHome": "Return to Main Menu",
+    "copyright": "Lolacat>< Japanese Sushi & Noodles Kitchen. All rights reserved.",
+    "demoNotice": "Local demo mode: Changes are saved in your browser's LocalStorage."
+  },
+  "days": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  }
+}

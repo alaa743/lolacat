@@ -1,0 +1,63 @@
+{
+  "brand": {
+    "name": "Lolacat><",
+    "tagline": "لقيمات صغيرة.. سعادة كبيرة.",
+    "splashMessage": "بنحضّرلك حاجة لذيذة...",
+    "skipSplash": "دخول القائمة"
+  },
+  "nav": {
+    "menu": "القائمة",
+    "featured": "الأطباق المميزة",
+    "categories": "الأقسام",
+    "about": "الموقع والمواعيد",
+    "admin": "لوحة التحكم",
+    "backToMenu": "العودة للقائمة",
+    "backToCategory": "العودة للقسم",
+    "browseFullMenu": "تصفح القائمة الكاملة",
+    "exploreMoreDishes": "اكتشف المزيد من الأطباق",
+    "viewPublicMenu": "عرض قائمة العملاء",
+    "previewMenu": "معاينة القائمة"
+  },
+  "language": {
+    "en": "EN",
+    "ar": "AR",
+    "switchTo": "تغيير اللغة",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ غير متوقع",
+    "retry": "إعادة المحاولة",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "confirm": "تأكيد",
+    "close": "إغلاق",
+    "clear": "مسح",
+    "reset": "إعادة ضبط",
+    "search": "بحث",
+    "actions": "إجراءات",
+    "status": "الحالة",
+    "yes": "نعم",
+    "no": "لا",
+    "notFoundTitle": "الصفحة غير موجودة",
+    "notFoundDesc": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "goHome": "العودة للقائمة الرئيسية",
+    "copyright": "Lolacat>< مطبخ السوشي والنودلز الياباني. جميع الحقوق محفوظة.",
+    "demoNotice": "وضع العرض التجريبي: يتم حفظ التغييرات محلياً في متصفحك."
+  },
+  "days": {
+    "monday": "الإثنين",
+    "tuesday": "الثلاثاء",
+    "wednesday": "الأربعاء",
+    "thursday": "الخميس",
+    "friday": "الجمعة",
+    "saturday": "السبت",
+    "sunday": "الأحد"
+  }
+}

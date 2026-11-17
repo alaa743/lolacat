@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-burgundy: #6e142d;
+  --color-brand-burgundy-hover: #550e22;
+  --color-brand-burgundy-soft: #8d2643;
+
+  --color-brand-pink: #fce3eb;
+  --color-brand-pink-soft: #fff5f8;
+  --color-brand-pink-border: #f5c6d6;
+
+  --color-brand-cream: #fffbf9;
+  --color-surface: #fffbf9;
+  --color-surface-card: #ffffff;
+  --color-surface-pink: #fff4f8;
+
+  --color-text-primary: #2b1119;
+  --color-text-secondary: #684953;
+
+  --shadow-card: 0 8px 28px -6px rgba(110, 20, 45, 0.08);
+  --shadow-card-hover: 0 14px 36px -8px rgba(110, 20, 45, 0.16);
+
+  --radius-card: 1.25rem;
+  --radius-button: 0.875rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    font-family:
+      "Plus Jakarta Sans",
+      "Cairo",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    overflow-x: clip;
+  }
+
+  html[dir="rtl"] body {
+    font-family: "Cairo", "Tajawal", "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-brand-burgundy);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+}
