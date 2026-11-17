@@ -94,11 +94,10 @@ export function RestaurantFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/70 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-white/15 pt-6 text-center text-xs text-white/70 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {t("common:common.copyright")}
           </p>
-          <p>{t("common:common.demoNotice")}</p>
         </div>
       </div>
     </footer>

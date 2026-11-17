@@ -48,8 +48,7 @@
     "notFoundTitle": "Page Not Found",
     "notFoundDesc": "The page you are looking for doesn't exist or has been moved.",
     "goHome": "Return to Main Menu",
-    "copyright": "Lolacat>< Japanese Sushi & Noodles Kitchen. All rights reserved.",
-    "demoNotice": "Local demo mode: Changes are saved in your browser's LocalStorage."
+    "copyright": "Lolacat>< Japanese Sushi & Noodles Kitchen. All rights reserved."
   },
   "days": {
     "monday": "Monday",

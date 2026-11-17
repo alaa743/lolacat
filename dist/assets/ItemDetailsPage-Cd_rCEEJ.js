@@ -1,4 +1,4 @@
-import{j as e}from"./motion-Dmu_jKCi.js";import{u as k,a as h}from"./i18n-Ci-l50TW.js";import{d as L,L as l}from"./vendor-moPFsORz.js";import{c as v,u as S,E as C,b as d,g as n,B as m,U as I}from"./index-C7tiJFvQ.js";import{B as M}from"./PageHeader-Ds6TVql7.js";import{S as D}from"./SafeFoodImage-CNWjx96s.js";import{D as T,S as A,C as P,F as z,M as B}from"./MenuItemCard-Qh9yduPO.js";import{S as F,P as E,f as $}from"./PriceDisplay-b3sw1KPI.js";import{A as U}from"./arrow-left-CAatm9v7.js";import"./forms-BDdlNHxC.js";/**
+import{j as e}from"./motion-Dmu_jKCi.js";import{u as k,a as h}from"./i18n-Ci-l50TW.js";import{d as L,L as l}from"./vendor-moPFsORz.js";import{c as v,u as S,E as C,b as d,g as n,B as m,U as I}from"./index-BmSfE5zy.js";import{B as M}from"./PageHeader-B5SyV4k9.js";import{S as D}from"./SafeFoodImage-B7F6QypZ.js";import{D as T,S as A,C as P,F as z,M as B}from"./MenuItemCard-CoUxvLZk.js";import{S as F,P as E,f as $}from"./PriceDisplay-CHJImTLe.js";import{A as U}from"./arrow-left-D3xqnmMy.js";import"./forms-BDdlNHxC.js";/**
  * @license lucide-react v0.468.0 - ISC
  *
  * This source code is licensed under the ISC license.
