@@ -43,7 +43,7 @@ test.describe("Lolacat>< Complete Digital Menu E2E", () => {
     await expect(page.getByRole("heading", { name: "دراجون رول" })).toBeVisible();
 
     // 9. Return to the main menu
-    await page.getByRole("link", { name: "تصفح القائمة الكاملة" }).click();
+    await page.getByRole("article").getByRole("link", { name: "تصفح القائمة الكاملة" }).click();
     await expect(page).toHaveURL(/\/$/);
 
     // Switch back to EN for English admin assertions
